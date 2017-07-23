@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./js/public/build.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <button id="add">Add Users</button>
+        <form>
+          <select>
+            <option disabled>-- Choose the sort method --</option>
+            <option value="alphabetFirstName">Alphabet sort First Name</option>
+            <option value='reverseFirstName'>Reverse sort First Name</option>
+            <option value='alphabetLastName'>Alphabet sort Last Name</option>
+            <option value='revesreLastName'>Reverse sort Last Name</option>
+          </select>
+        </form>
+        <div id="users" class="hidden"></div>
+    </div>
+</body>
+</html>

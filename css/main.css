@@ -1,0 +1,356 @@
+* {
+  box-sizing: border-box;
+  font-family: 'PT Sans', Arial;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://wallbox.ru/wallpapers/main/201127/66008ada29fbb0145746296c8a8c9637.jpg') repeat;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+
+#wrapper {
+  padding: 0 0;
+  margin: 0 50px;
+}
+
+
+#add {
+  display: block;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  border-radius: 50%;
+  border: 1px solid rgb(226, 205, 187);
+  background: -webkit-linear-gradient(right, rgba(253, 117, 0, 0.41) 50% ,rgba(234, 153, 60, 0.55) 100%);
+              -moz-linear-gradient(right, rgba(253, 117, 0, 0.41) 50% ,rgba(234, 153, 60, 0.55) 100%);
+              -ms-linear-gradient(right, rgba(253, 117, 0, 0.41) 50% ,rgba(234, 153, 60, 0.55) 100%);
+              linear-gradient(right, rgba(253, 117, 0, 0.41) 50% ,rgba(234, 153, 60, 0.55) 100%);
+  font-size: 1.6em;
+  color: rgb(226, 205, 187);
+  text-transform: uppercase;
+  box-shadow: 0px 0px 5px 3px rgb(148, 144, 144);
+  cursor: pointer;
+
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#add:hover {
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-delay: 0.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#add:focus {
+  outline: #fff;
+}
+
+select {
+  display: block;
+  width: 300px;
+  height: 60px;
+  background: bisque;
+  font-size: 1.5em;
+  border-radius: 17px;
+  padding: 5px;
+  margin: 16px 0 0 90px;
+  cursor: pointer;
+}
+
+#users {
+  margin-top: 40px;
+  max-height: 735px;
+  width: 45%;
+  background-color: #222;
+  overflow-y: scroll;
+  float: left;
+
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 3px rgb(148, 144, 144);
+
+  background: -webkit-linear-gradient(left, rgba(239, 165, 102, 0.42) 10%,rgba(41, 24, 8, 0.49) 55%, rgba(1, 1, 1, 0.27) 100%);
+  -moz-radial-gradient(left, rgba(239, 165, 102, 0.42) 10%,rgba(41, 24, 8, 0.49) 55%, rgba(1, 1, 1, 0.27) 100%);
+  -ms-radial-gradient(left, rgba(239, 165, 102, 0.42) 10%,rgba(41, 24, 8, 0.49) 55%, rgba(1, 1, 1, 0.27) 100%);
+  radial-gradient(left, rgba(239, 165, 102, 0.42) 10%,rgba(41, 24, 8, 0.49) 55%, rgba(1, 1, 1, 0.27) 100%);
+}
+
+
+.user {
+  padding: 0px;
+  margin: 25px auto; 
+  width: 85%;
+  border-radius: 1px;
+  background-color: #fff;
+  border-radius: 8px;
+
+  box-shadow: 1px 1px 3px rgb(0,0,0);
+}
+
+.user::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.user:first-child {
+  margin-top: 22px;
+}
+
+.user img {
+  border-radius: 8px;
+  width: 25%;
+  box-shadow: 0 0 3px 2px rgba(4, 0, 0, 0.69);
+  float: left;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.user h2 {
+  font-size: 1.6em;
+  vertical-align: middle;
+  color: rgb(152, 125, 19);
+  cursor: pointer;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 30px;
+}
+
+
+.user .info {
+  color: rgb(249, 128, 0);
+  text-decoration: underline;
+  font-size: 0.8em;
+  cursor: pointer;
+  float: right;
+  margin: 5px;
+}
+
+.user .info:hover {
+  color: rgba(0, 53, 255, 0.76);
+
+}
+
+.user .gender {
+  color: #888;
+  font-size: 1em;
+  display: block;
+  text-align: center;
+}
+
+.user_popup {
+  width: 38%;
+  min-height: 450px;
+  overflow: hidden;
+  padding: 5px;
+  margin-top: 70px;
+  margin-right: 50px;
+  float: right;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 3px rgb(148, 144, 144);
+  color: rgb(226, 205, 187);
+
+  background: -webkit-linear-gradient(right, rgba(253, 117, 0, 0.41) 50% ,rgba(234, 153, 60, 0.75) 100%);
+  -moz-linear-gradient(right, rgba(253, 117, 0, 0.41) 50% ,rgba(234, 153, 60, 0.75) 100%);
+  -ms-linear-gradient(right, rgba(253, 117, 0, 0.41) 50% ,rgba(234, 153, 60, 0.75) 100%);
+  linear-gradient(right, rgba(253, 117, 0, 0.41) 50% ,rgba(234, 153, 60, 0.75) 100%);
+}
+
+.user_popup .ava{
+  width: 60%;
+  margin: 5px auto;
+}
+
+.user_popup .ava img {
+  width: 100%;
+  box-shadow: 0px 0px 5px 3px rgb(148, 144, 144);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user_popup .ava h2 {
+  vertical-align: top;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2.7em;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.user_popup .ava span {
+  font-weight: normal;
+  font-size: 0.6em;
+  font-style: italic;
+}
+
+.user_popup p {
+  text-transform: capitalize;
+  font-size: 1.2em;
+  margin-top: 0px;
+  text-align: center;
+  color: rgb(180, 181, 143);
+  cursor: pointer;
+}
+
+.user_popup p .city {
+  font-weight: bold;
+}
+
+.contacts {
+  margin-left: 100px;
+}
+
+.contacts_images {
+  width: 25px;
+  margin: 0;
+  display: inline-block;
+}
+
+.contacts_images li {
+  background: url('http://omicrontelecom.ru/wp-content/uploads/2015/10/contact-620x617.png') no-repeat;
+  background-size: 50px auto;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.contacts_images .phone {
+  background-position: 100% 100%;
+}
+
+.contacts_images .email {
+  background-position: 100% 0;
+  color: rgb(42, 79, 220);
+}
+
+.contacts_images .street {
+  background-position: 0 100%;
+  text-transform: capitalize;
+}
+
+.contacts_images .postcode {
+  background-position: 0 0;
+}
+
+.contacts_info {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.contacts_info li {
+  margin-bottom: 20px;
+}
+
+.contacts_info li:nth-child(2) {
+  color: rgb(75, 236, 126);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.contacts_info li:nth-child(3) {
+  text-transform: capitalize;
+}
+
+.contacts_info li:first-child {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.user_popup .close {
+  width: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+}
+
+.user_popup .close:hover {
+  width: 21px;
+  background-color: rgb(226, 187, 10);
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.option {
+  color: #bbb
+}
+
+h2 > span {
+  text-transform: lowercase;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background: -webkit-linear-gradient(right, rgba(253, 117, 0, 0.41) 50% ,rgba(234, 153, 60, 0.75) 100%);
+  }
+  50% {
+    background: -webkit-linear-gradient(right, rgba(253, 217, 0, 0.41) 50% ,rgba(234, 153, 60, 0.75) 100%);
+  }
+  100% {
+    background: -webkit-linear-gradient(right, rgba(253, 017, 0, 0.41) 50% ,rgba(234, 153, 60, 0.75) 100%);
+  }
+}
+
+::-webkit-scrollbar-button {
+background-image:url('');
+background-repeat:no-repeat;
+width:5px;
+height:0px
+}
+
+::-webkit-scrollbar-track {
+background-color:#ecedee
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 0px;
+border-radius: 0px;
+background-color: rgb(200,100,50);
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color:#56999f;
+}
+
+::-webkit-resizer {
+background-image:url('');
+background-repeat:no-repeat;
+width:4px;
+height:0px
+}
+
+::-webkit-scrollbar {
+width: 4px;
+}
